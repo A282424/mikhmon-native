@@ -85,3 +85,4 @@
 - `ui/BackupActivity` — النسخ الاحتياطي على الراوتر.
 
 كل الاتصال بالشبكة يتم على `Dispatchers.IO` عبر Kotlin Coroutines (لا يُجمّد الواجهة أبداً).
+  
