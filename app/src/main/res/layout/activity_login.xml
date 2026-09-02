@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mik_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_mik_card"
+            android:layout_marginTop="24dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Please Login"
+                android:textColor="@color/mik_text"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="16dp"
+                android:background="@color/mik_bg_darker" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/mikhmon_logo"
+                    android:contentDescription="Mikhmon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="MIKHMON NATIVE"
+                    android:textColor="@color/mik_text"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="20dp" />
+
+                <EditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_mik_input"
+                    android:hint="اسم مميز لهذا الجهاز (اختياري)"
+                    android:textColorHint="@color/mik_text_muted"
+                    android:textColor="@color/mik_text"
+                    android:padding="14dp"
+                    android:layout_marginBottom="10dp" />
+
+                <EditText
+                    android:id="@+id/etHost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_mik_input"
+                    android:hint="عنوان IP للراوتر"
+                    android:textColorHint="@color/mik_text_muted"
+                    android:textColor="@color/mik_text"
+                    android:inputType="textUri"
+                    android:padding="14dp"
+                    android:layout_marginBottom="10dp" />
+
+                <EditText
+                    android:id="@+id/etPort"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_mik_input"
+                    android:hint="المنفذ (Port)"
+                    android:textColorHint="@color/mik_text_muted"
+                    android:textColor="@color/mik_text"
+                    android:inputType="number"
+                    android:text="8729"
+                    android:padding="14dp"
+                    android:layout_marginBottom="10dp" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchSsl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:checked="true"
+                    android:textColor="@color/mik_text_muted"
+                    android:text="اتصال مشفّر API-SSL (موصى به عبر الإنترنت)" />
+
+                <EditText
+                    android:id="@+id/etUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_mik_input"
+                    android:hint="Username"
+                    android:textColorHint="@color/mik_text_muted"
+                    android:textColor="@color/mik_text"
+                    android:padding="14dp"
+                    android:layout_marginBottom="10dp" />
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_mik_input"
+                    android:hint="Password"
+                    android:textColorHint="@color/mik_text_muted"
+                    android:textColor="@color/mik_text"
+                    android:inputType="textPassword"
+                    android:padding="14dp"
+                    android:layout_marginBottom="18dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnLogin"
+                    style="@style/Theme.MikhmonNative.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:text="Login"
+                    android:textSize="16sp" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvError"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@color/mik_red"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="الأجهزة المحفوظة"
+            android:textColor="@color/mik_text_muted"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSavedServers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+</ScrollView>

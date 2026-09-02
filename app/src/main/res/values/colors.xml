@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- لوحة ألوان مطابقة لتصميم Mikhmon الأصلي (AdminLTE الداكن) -->
+    <color name="mik_bg">#2A3642</color>
+    <color name="mik_bg_darker">#232D37</color>
+    <color name="mik_sidebar">#2E3A46</color>
+    <color name="mik_card">#37454F</color>
+    <color name="mik_card_light">#3F4E59</color>
+    <color name="mik_topbar">#232D37</color>
+    <color name="mik_highlight">#4AA3D8</color>
+
+    <color name="mik_blue">#4FA8D8</color>
+    <color name="mik_green">#5CB878</color>
+    <color name="mik_yellow">#F0AD4E</color>
+    <color name="mik_red">#E8746E</color>
+
+    <color name="mik_text">#F5F7F8</color>
+    <color name="mik_text_muted">#AEB6BF</color>
+    <color name="mik_border">#465563</color>
+
+    <!-- إبقاء الأسماء القديمة لتوافق أي مرجع سابق -->
+    <color name="primary">#4FA8D8</color>
+    <color name="primary_dark">#232D37</color>
+    <color name="accent">#4AA3D8</color>
+</resources>

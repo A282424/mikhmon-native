@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:label="Mikhmon Native"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.MikhmonNative"
+        android:usesCleartextTraffic="false"
+        android:networkSecurityConfig="@xml/network_security_config">
+
+        <activity
+            android:name=".ui.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.DashboardActivity" android:exported="false" />
+        <activity android:name=".ui.UsersActivity" android:exported="false" />
+        <activity android:name=".ui.AddUserActivity" android:exported="false" />
+        <activity android:name=".ui.ProfilesActivity" android:exported="false" />
+        <activity android:name=".ui.AddProfileActivity" android:exported="false" />
+        <activity android:name=".ui.VouchersActivity" android:exported="false" />
+        <activity android:name=".ui.ReportsActivity" android:exported="false" />
+        <activity android:name=".ui.BackupActivity" android:exported="false" />
+
+    </application>
+
+</manifest>

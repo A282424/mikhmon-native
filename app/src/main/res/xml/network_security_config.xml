@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ملاحظة أمنية:
+  إذا كان جهاز MikroTik يستخدم شهادة SSL موقّعة ذاتياً (self-signed) على منفذ API-SSL،
+  فسيرفض النظام الاتصال افتراضياً. الحل الصحيح هو تثبيت شهادة حقيقية على الراوتر
+  (مثلاً عبر Let's Encrypt) بدل تعطيل التحقق من الشهادة.
+  التطبيق حالياً يعتمد على التحقق الافتراضي من النظام لأي اتصال SSL.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>
